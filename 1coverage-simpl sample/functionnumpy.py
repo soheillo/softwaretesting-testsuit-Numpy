@@ -5,15 +5,21 @@ f=input()
 print('\n')
 h=int(f)
 n=x[h]
-print ('the ', h,"th array in numpy fuctions array is:" ,n,'\n')
+print ('the ', h,"th array in numpy members array is:" ,n,'\n')
 
-def tenarray():
-        print ("enter a number from 1 to ",len(x)," with the aim of printing the list of numpy fuctions equal to this number:" )
+def tenmembers():
+        print ("enter a number from 1 to ",len(x)," with the aim of printing the list of numpy members equal to this number:" )
         l=input() 
         for i in range(int(l)):
            print( x[i])
+def tenfunctions():
+        numpy_functions = [member for member in x if callable(getattr(np, member))]
+        print('\n\n',"the Number of Functions in NumPy:", len(numpy_functions))
 
-tenarray()
+
+tenmembers()
+tenfunctions()
+
     
     
 
